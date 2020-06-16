@@ -7,16 +7,15 @@ function convertFahrenheitToCelsius() {
     celsiusValue = Math.round(celsiusValue * 100) / 100;
     document.getElementById("celsiusBox").value = celsiusValue;
   }
-  
-  
 }
 
 function convertCelsiusToFahrenheit() {
-  let celsiusValue = (document.getElementById("celsiusBox").value * (9 / 5)) + 32;
-  document.getElementById("fahrenheitBox").value = Math.round(celsiusValue * 100) / 100;
   if (document.getElementById("celsiusBox").value == '') {
     document.getElementById("fahrenheitBox").value = '';
+  } else {
+    let celsiusValue = document.getElementById("celsiusBox").value;
+    let fahrenheitValue = celsiusValue * (9 / 5) + 32;
+    fahrenheitValue = Math.round(fahrenheitValue * 100) / 100;
+    document.getElementById("fahrenheitBox").value = fahrenheitValue;
   }
-
 }
-
