@@ -1,9 +1,14 @@
 function convertFahrenheitToCelsius() {
-  let fahrenheitValue = (document.getElementById("fahrenheitBox").value - 32) * (5 / 9);
-  document.getElementById("celsiusBox").value = Math.round(fahrenheitValue * 100) / 100;
   if (document.getElementById("fahrenheitBox").value == '') {
     document.getElementById("celsiusBox").value = '';
+  } else {
+    let fahrenheitValue = document.getElementById("fahrenheitBox").value;
+    let celsiusValue = (fahrenheitValue - 32) * (5 / 9);
+    celsiusValue = Math.round(celsiusValue * 100) / 100;
+    document.getElementById("celsiusBox").value = celsiusValue;
   }
+  
+  
 }
 
 function convertCelsiusToFahrenheit() {
