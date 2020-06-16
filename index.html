@@ -1,23 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>repl.it</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-    <p>Enter a number in either degrees fahrenheit or degrees celsius, and I will convert it.</p>
-    <p>
-        <input type="number" id="fahrenheitPlaceholder" value=8>
-        <label> °F = </label>
-        <input type="number" id="celsiusPlaceholder" value=8>
-        <label> °C</label>
-    </p>
-    <script src="script.js"></script>
-
+  <p>Enter a number in either degrees fahrenheit or degrees celsiusBox, and I will convert it.</p>
+  <p><input type="number" id="fahrenheitBox" onkeyup="convert('fahrenheitBox')"> &#8457; = <input type="number" id="celsiusBox"
+      onkeyup="convert('celsiusBox')"> &#8451;</p>
+  <script src="script.js"></script>
 </body>
 
 </html>

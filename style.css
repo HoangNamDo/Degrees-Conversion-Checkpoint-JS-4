@@ -2,7 +2,7 @@ p {
     font-size: 50px;
 }
 
-#fahrenheitPlaceholder, #celsiusPlaceholder {
+#fahrenheitBox, #celsiusBox {
     height: 50px;
     width: 60px;
 }
