@@ -1,0 +1,8 @@
+p, label {
+    font-size: 50px;
+}
+
+#fahrenheitInput, #celsiusInput {
+    height: 50px;
+    width: 60px;
+}
