@@ -1,8 +1,8 @@
-p, label {
+p {
     font-size: 50px;
 }
 
-#fahrenheitInput, #celsiusInput {
+#fahrenheitPlaceholder, #celsiusPlaceholder {
     height: 50px;
     width: 60px;
 }

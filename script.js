@@ -1,15 +1,22 @@
-// function covertDegree {
-    // let fahrenheitInput = document.getElementById(fahrenheitInput).value;
-    // console(fahrenheitInput);
-// }
+fahrenheitPlaceholder.addEventListener("onkeyup", fahrenheitToCelsius("fahrenheitPlaceholder", "celsiusPlaceholder"));
+celsiusPlaceholder.addEventListener("onkeyup", celsiusToFahrenheit("celsiusPlaceholder", "fahrenheitPlaceholder"));
 
-var fahrenheit = document.getElementById(fahrenheitInput).value;
+function fahrenheitToCelsius(sourceElementId, destinationElementId) {
+    if (document.getElementById("sourceElementId").value == "") {
+        document.getElementById("destinationElementId").value = "";
+    } else {
+        let fahrenheitValue = document.getElementById(sourceElementId).value;
+        celsiusValue = (5 / 9) * (fahrenheitValue - 32);
+        document.getElementById(destinationElementId).value = celsiusValue;
+    }
+}
 
-document.getElementById(fahrenheitInput).value = toCelsius(fahrenheit);
-
-
-
-
-function toCelsius(f) {
-    return (5 / 9) * (f - 32);
+function celsiusToFahrenheit(sourceElementId, destinationElementId) {
+    if (document.getElementById("sourceElementId").value == "") {
+        document.getElementById("destinationElementId").value = "";
+    } else {
+        let celsiusValue = document.getElementById(sourceElementId).value;
+        fahrenheitValue = celsiusValue * (9 / 5) + 32;
+        document.getElementById(destinationElementId).value = fahrenheitValue;
+    }
 }
