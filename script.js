@@ -1,25 +1,26 @@
-fahrenheitBox.addEventListener("change", convertFahrenheitToCelsius);
-celsiusBox.addEventListener("change", convertCelsiusToFahrenheit);
+let fahrenheit = document.getElementById("fahrenheitBox");
+let celsius = document.getElementById("celsiusBox");
 
-fahrenheitBox.addEventListener("keyup", convertFahrenheitToCelsius);
-celsiusBox.addEventListener("keyup", convertCelsiusToFahrenheit);
+fahrenheit.addEventListener("change", convertFahrenheitToCelsius);
+celsius.addEventListener("change", convertCelsiusToFahrenheit);
+
+fahrenheit.addEventListener("keyup", convertFahrenheitToCelsius);
+celsius.addEventListener("keyup", convertCelsiusToFahrenheit);
 
 function convertFahrenheitToCelsius() {
-  if (document.getElementById("fahrenheitBox").value == '') {
-    document.getElementById("celsiusBox").value = '';
+  if (fahrenheit.value == "") {
+    celsius.value = "";
   } else {
-    let fahrenheitValue = document.getElementById("fahrenheitBox").value;
-    let celsiusValue = (fahrenheitValue - 32) * (5 / 9);
-    document.getElementById("celsiusBox").value = celsiusValue.toFixed(2);
+    celsius.value = (fahrenheit.value - 32) * (5 / 9);
+    celsius.value = celsius.value.toFixed(2);
   }
 }
 
 function convertCelsiusToFahrenheit() {
-  if (document.getElementById("celsiusBox").value == '') {
-    document.getElementById("fahrenheitBox").value = '';
+  if (celsius.value == "") {
+    fahrenheit.value = "";
   } else {
-    let celsiusValue = document.getElementById("celsiusBox").value;
-    let fahrenheitValue = celsiusValue * (9 / 5) + 32;
-    document.getElementById("fahrenheitBox").value = fahrenheitValue.toFixed(2);
+    fahrenheit.value = celsius.value * (9 / 5) + 32;
+    fahrenheit.value = fahrenheit.value.toFixed(2);
   }
 }
