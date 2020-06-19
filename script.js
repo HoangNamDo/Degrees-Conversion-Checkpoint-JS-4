@@ -1,11 +1,11 @@
 let fahrenheit = document.getElementById("fahrenheitBox");
 let celsius = document.getElementById("celsiusBox");
 
-fahrenheit.addEventListener("change", convertFahrenheitToCelsius);
-celsius.addEventListener("change", convertCelsiusToFahrenheit);
+fahrenheitBox.addEventListener("change", convertFahrenheitToCelsius);
+celsiusBox.addEventListener("change", convertCelsiusToFahrenheit);
 
-fahrenheit.addEventListener("keyup", convertFahrenheitToCelsius);
-celsius.addEventListener("keyup", convertCelsiusToFahrenheit);
+fahrenheitBox.addEventListener("keyup", convertFahrenheitToCelsius);
+celsiusBox.addEventListener("keyup", convertCelsiusToFahrenheit);
 
 function convertFahrenheitToCelsius() {
   if (fahrenheit.value == "") {
